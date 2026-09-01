@@ -1,0 +1,80 @@
+REMAINING KEY FIXES:
+
+1. After logout token should be expired for each role (Black listed token) (optional)
+
+2. walkin guest (booking by receptionist) => booking confirmed initially 
+   Online Guest => Request pending intially untill receptionist confirmed
+
+
+Concepts:
+
+
+If api/guest/create-walkin 
+
+- To create walkin guest by receptionist  
+- Status initially confirmed 
+- then, api/booking/create-booking for walk-in guest
+
+
+If api/guest/self-book
+
+- api/guest/register then api/guest/login
+- then, Guest book online api/guest//self-book
+- Status initially pending untill receptionist confirmed
+
+
+aj 14th may ha lkn mene 13th may daala checkin date ma or accept hogya yani booking create hogyi ye thk nhi ha 
+checkInDate and checkOutDate should be greater or equal to today date
+
+
+{
+  "guest": "6a04b041806bc6fe97f5257d",
+  "room": "69fd82870169282bf8cf0a17",
+  "checkInDate": "2026-05-23",
+  "checkOutDate": "2026-05-24",
+  "services": [
+    {
+      "serviceId": "69fee750cd1ff40df0dc2602",
+      "name": "Laundry",
+      "price": 500
+    },
+    {
+      "serviceId": "69fee67fcd1ff40df0dc2600",
+      "name": "Transport",
+      "price": 2000
+    }
+  ]
+}
+
+
+
+
+{
+  "guest": "6a06afa8580edea869e58130",
+  "room": "6a006fa805ef6b3ee3999910",
+  "checkInDate": "2026-05-15",
+  "checkOutDate": "2026-05-16",
+  "services": [
+    {
+      "serviceId": "69fee750cd1ff40df0dc2602",
+      "name": "Laundry",
+      "price": 500
+    }
+  ]
+}
+
+Pay biill on it as a guest
+6a05eeeb674b6a2e3bccd797
+
+
+
+
+dummydata
+
+
+
+
+
+
+102: Compact Executive SingleDesigned specifically for the modern business traveler, this smart room offers a highly productive workspace balanced with premium relaxation features.Space: 22 square meters with dedicated work and rest zones.Lounge/Work: Laptop-friendly safe, executive desk, and a smart TV.Bedding: Premium single bed, plush hypoallergenic microfiber pillows.Bathroom: Backlit vanity mirror, heated towel racks, and organic toiletries.Price: $75 USD per night.Room 302: Deluxe PanoramaThis high-floor room features striking, unobstructed views and an open-concept layout with a private sitting area, offering a true taste of upscale hospitality.Space: 52 square meters including an outdoor living area.Lounge: Nespresso coffee machine, plush lounge sofa, and custom bar setup.Bedding: King bed with breathable eucalyptus sheets.Bathroom: Walk-in rainfall shower, marble double vanities, and heated flooring.Price: $220 USD per night.If you like this format, I can also generate options with different price points, or change the amenities for any specific room. What would you like to tweak next?
+

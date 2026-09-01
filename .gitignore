@@ -1,0 +1,34 @@
+# ==========================================
+# 🧱 MAIN ROOT RULES
+# ==========================================
+node_modules/
+.DS_Store
+.vscode/
+
+# ==========================================
+# ⚙️ BACKEND SPECIFIC RULES
+# ==========================================
+Backend/node_modules/
+Backend/.env
+Backend/.env.backend
+Backend/*.env
+Backend/logs/
+Backend/*.log
+Backend/db/
+Backend/*.sqlite
+Backend/*.db
+Backend/public/uploads/
+Backend/uploads/
+Backend/storage/
+
+# ==========================================
+# 💻 FRONTEND SPECIFIC RULES
+# ==========================================
+Frontend/node_modules/
+Frontend/dist/
+Frontend/dist-ssr/
+Frontend/build/
+Frontend/out/
+Frontend/.env
+Frontend/.env.local
+Frontend/*.local

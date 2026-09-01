@@ -1,0 +1,32 @@
+# Dependencies
+node_modules/
+
+# Environment Variables (Bohat zaroori hai!)
+.env
+.env.backend
+*.env
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+
+# Runtime data & Databases (Local database files repo me nahi jani chahiye)
+pids
+*.pid
+*.seed
+*.pid.lock
+db/
+*.sqlite
+*.db
+
+# Uploads / Media (Users ki upload ki hui pictures/files)
+public/uploads/
+uploads/
+storage/
+
+# Editor / System Files
+.vscode/
+.idea/
+.DS_Store
