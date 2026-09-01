@@ -7,10 +7,20 @@ const app = express();
 // CORS
 // ======================================================
 
+const allowedOrigins = ["http://localhost:5173", "http://localhost:5000"];
+
 app.use(cors({
-    origin: "http://localhost:5173",
+    origin: function (origin, callback) {
+        // local development aur production (bina origin requests) dono allow karne ke liye
+        if (!origin || allowedOrigins.indexOf(origin) !== -1 || origin.includes("onrender.com")) {
+            callback(null, true);
+        } else {
+            callback(new Error("Not allowed by CORS"));
+        }
+    },
     credentials: true
 }));
+
 
 
 // ======================================================
@@ -112,6 +122,20 @@ app.use(
   "/api/contact",
   require("./routes/contact.routes")
 );
+
+
+// ======================================================
+// 🌐 SERVE FRONTEND (RENDER DEPLOYMENT)
+// ======================================================
+const path = require('path');
+
+// 1. Git root folder se Frontend ke 'dist' folder ko access karna
+app.use(express.static(path.join(__dirname, '../Frontend/dist')));
+
+// 2. Kisi bhi random URL request par React ki index.html file send karna
+app.get('*', (req, res) => {
+  res.sendFile(path.resolve(__dirname, '../Frontend', 'dist', 'index.html'));
+});
 
 // ======================================================
 // ERROR HANDLER

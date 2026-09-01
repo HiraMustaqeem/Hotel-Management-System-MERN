@@ -1,0 +1,25 @@
+{
+  "name": "luxurystay",
+  "version": "1.0.0",
+  "description": "A comprehensive Full-stack Hotel Management System built with the MERN Stack, featuring online and walk-in bookings, real-time room availability, role-based authentication & authorization, and dedicated dashboards.",
+  "main": "Backend/server.js",
+  "scripts": {
+    "install-backend": "npm install --prefix Backend",
+    "install-frontend": "npm install --prefix Frontend",
+    "install-all": "npm run install-backend && npm run install-frontend",
+    "build-frontend": "npm run build --prefix Frontend",
+    "build": "npm run install-all && npm run build-frontend",
+    "start": "node Backend/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HiraMustaqeem/Hotel-Management-System-MERN.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HiraMustaqeem/Hotel-Management-System-MERN/issues"
+  },
+  "homepage": "https://github.com/HiraMustaqeem/Hotel-Management-System-MERN#readme"
+}
