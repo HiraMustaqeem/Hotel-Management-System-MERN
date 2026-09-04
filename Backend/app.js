@@ -133,7 +133,7 @@ const path = require('path');
 app.use(express.static(path.join(__dirname, '../Frontend/dist')));
 
 // 2. Kisi bhi random URL request par React ki index.html file send karna
-app.get('*', (req, res) => {
+app.get('*splat', (req, res) => {
   res.sendFile(path.resolve(__dirname, '../Frontend', 'dist', 'index.html'));
 });
 
